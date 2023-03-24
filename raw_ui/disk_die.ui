@@ -14,7 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: transparent;</string>
+   <string notr="true"/>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -51,7 +51,6 @@ QPushButton:pressed {
     border-radius: 10px;
     padding: 0 8px;
     background-color: rgb(100,255,100);
-    selection-background-color: darkgrey;
 }</string>
      </property>
      <property name="text">
@@ -68,7 +67,14 @@ QPushButton:pressed {
       <string notr="true">QCheckBox::indicator {
 	width: 20px;
 	height: 20px;
-    background-color: red;
+    background-color: qradialgradient(spread:pad, 
+                            cx:0.5,
+                            cy:0.5,
+                            radius:0.9,
+                            fx:0.5,
+                            fy:0.5,
+                            stop:0 rgb(255, 0, 0), 
+                            stop:1 rgb(125, 0, 0));
     border-radius: 10px;
 	border: 2px solid rgb(100,0,0);
 }

@@ -13,7 +13,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(400, 50)
-        Form.setStyleSheet("background-color: transparent;")
+        Form.setStyleSheet("")
         self.horizontalLayout = QtWidgets.QHBoxLayout(Form)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.pushButton = QtWidgets.QPushButton(parent=Form)
@@ -41,7 +41,6 @@ class Ui_Form(object):
 "    border-radius: 10px;\n"
 "    padding: 0 8px;\n"
 "    background-color: rgb(100,255,100);\n"
-"    selection-background-color: darkgrey;\n"
 "}")
         self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
@@ -50,7 +49,14 @@ class Ui_Form(object):
         self.checkBox.setStyleSheet("QCheckBox::indicator {\n"
 "    width: 20px;\n"
 "    height: 20px;\n"
-"    background-color: red;\n"
+"    background-color: qradialgradient(spread:pad, \n"
+"                            cx:0.5,\n"
+"                            cy:0.5,\n"
+"                            radius:0.9,\n"
+"                            fx:0.5,\n"
+"                            fy:0.5,\n"
+"                            stop:0 rgb(255, 0, 0), \n"
+"                            stop:1 rgb(125, 0, 0));\n"
 "    border-radius: 10px;\n"
 "    border: 2px solid rgb(100,0,0);\n"
 "}\n"

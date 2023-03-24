@@ -29,6 +29,14 @@ class Ui_MainWindow(object):
         self.pushButton.setGeometry(QtCore.QRect(580, 230, 50, 50))
         self.pushButton.setMinimumSize(QtCore.QSize(50, 50))
         self.pushButton.setMaximumSize(QtCore.QSize(50, 50))
+        self.pushButton.setStyleSheet("QPushButton {\n"
+"    border: 3px solid rgb(85, 170, 255);\n"
+"    border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(0, 255, 0);\n"
+"}")
         self.pushButton.setText("")
         self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
